@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* font size : 10px */
+  /* 10 / 16 = 0.625 = 62.5% */
+  /* percentage of user's browser font size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: $color-grey-light-1;
+}
+
+body {
+  padding: 1rem;
+}
