@@ -70,7 +70,8 @@ html {
       font-size: 50%; } }
 
 body {
-  padding: 2rem; }
+  padding: 2rem;
+  overflow-x: hidden; }
   @media (max-width: 75em) {
     body {
       padding: 0; } }
