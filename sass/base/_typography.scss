@@ -15,7 +15,7 @@
 // letter space : 0.75px -0.5px
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: $color-grey-dark;
   font-size: $default-font-size;
   line-height: 1.7;
@@ -27,6 +27,9 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6.4rem;
+
+  @include respond(phone) {
+  }
 
   &--main {
     display: block;
@@ -40,6 +43,11 @@ body {
   animation-iteration-count: 3;
   animation-timing-function: ease-out; */
 
+    @include respond(phone) {
+      letter-spacing: 1.6rem;
+      font-size: 4.8rem;
+    }
+
     /* short hand */
     animation: moveInLeft 1s 0.2s ease-out;
   }
@@ -50,6 +58,11 @@ body {
     font-weight: 600;
     letter-spacing: 1.7rem;
     animation: moveInRight 1s 0.2s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+      font-weight: 500;
+    }
   }
 }
 
@@ -67,13 +80,21 @@ body {
   // -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15rem;
   transition: all 0.3s;
 
   &:hover {
-    letter-spacing: 4px;
+    letter-spacing: 0.4rem;
     transform: scale(1.02);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  @include respond(tab-port) {
+    font-size: 3.2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
   }
 }
 

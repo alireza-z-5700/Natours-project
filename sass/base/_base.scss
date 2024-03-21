@@ -15,8 +15,24 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color: $color-grey-light-1;
+
+  @include respond(big-desktop) {
+    font-size: 68.75%; // font size 11px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // font size 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // font size 8px
+  }
 }
 
 body {
-  padding: 1rem;
+  padding: 2rem;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
 }

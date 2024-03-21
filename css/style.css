@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -42,12 +59,24 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color: #f7f7f7; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 68.75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
-  padding: 1rem; }
+  padding: 2rem; }
+  @media (max-width: 75em) {
+    body {
+      padding: 0; } }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #777;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -71,12 +100,20 @@ body {
   animation-timing-function: ease-out; */
     /* short hand */
     animation: moveInLeft 1s 0.2s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1.6rem;
+        font-size: 4.8rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 1.7rem;
     animation: moveInRight 1s 0.2s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 0.5rem;
+        font-weight: 500; } }
 
 .heading-secondary {
   font-size: 4.4rem;
@@ -86,12 +123,18 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   background-clip: text;
   color: transparent;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.15rem;
   transition: all 0.3s; }
   .heading-secondary:hover {
-    letter-spacing: 4px;
+    letter-spacing: 0.4rem;
     transform: scale(1.02);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3.2rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem; } }
 
 .heading-tertiary {
   font-size: 1.6rem;
