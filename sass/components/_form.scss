@@ -16,6 +16,10 @@
     display: block;
     transition: all 0.3s;
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-primary, 0.15);
@@ -50,6 +54,11 @@
   &__radio-group {
     width: 45%;
     display: inline-block;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {
@@ -60,7 +69,7 @@
     font-size: $default-font-size;
     cursor: pointer;
     position: relative;
-    padding-left: 4rem;
+    padding-left: 3.6rem;
   }
 
   &__radio-button {
@@ -68,22 +77,22 @@
     width: 2.8rem;
     display: inline-block;
     border-radius: 50%;
-    border: 5px solid $color-primary;
+    border: 0.5rem solid $color-primary;
     position: absolute;
     top: -0.4rem;
     left: 0;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 1rem;
       height: 1rem;
       border-radius: 50%;
       background-color: $color-primary;
       position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(40%, 40%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       opacity: 0;
       transition: opacity 0.3s;
     }

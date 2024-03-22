@@ -3,7 +3,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -26,6 +26,10 @@ html {
 
   @include respond(tab-port) {
     font-size: 50%; // font size 8px
+  }
+
+  @include respond(small-phone) {
+    font-size: 43%; // font size 7px
   }
 }
 

@@ -2,11 +2,31 @@
   background-color: $color-grey-light-1;
   padding: 32rem 0;
   margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 30rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 28rem 0;
+  }
+
+  @include respond(tab-land) {
+    padding-bottom: 48rem;
+  }
 }
 
 .section-features {
   padding: 24rem 0;
   // margin: 20rem 0;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 18rem 0;
+  }
 
   background-image: linear-gradient(
       to right bottom,
@@ -18,10 +38,19 @@
   background-position: top;
 
   transform: skewY(-6deg);
+
   margin-top: -20vh;
 
   & > * {
     transform: skewY(6deg);
+  }
+
+  @include respond(phone) {
+    transform: skewY(-12deg);
+
+    & > * {
+      transform: skewY(12deg);
+    }
   }
 }
 
@@ -29,6 +58,19 @@
   background-color: $color-grey-light-1;
   padding: 16rem 0;
   padding-top: 32rem;
+
+  @include respond(tab-port) {
+    padding: 14rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 12rem 0;
+  }
+
+  @include respond(tab-land) {
+    padding-top: 34rem;
+  }
+
   margin-top: -20vh;
 }
 
@@ -47,7 +89,7 @@
 }
 
 .book {
-  width: 80%;
+  max-width: 130rem;
   margin: 0 auto;
   background-image: linear-gradient(
       105deg,
@@ -55,15 +97,55 @@
       transparent 50%
     ),
     url(../img/nat-10.jpg);
-  background-size: 100%;
+  background-position: bottom;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
-  height: 60rem;
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        100deg,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10.jpg);
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        100deg,
+        rgba($color-white, 0.9) 70%,
+        transparent 70%
+      ),
+      url(../img/nat-10.jpg);
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 105%,
+        transparent 70%
+      ),
+      url(../img/nat-10.jpg);
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 65%;
+      padding: 4rem;
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+      padding: 4rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      padding: 4rem;
+    }
   }
 }
 
