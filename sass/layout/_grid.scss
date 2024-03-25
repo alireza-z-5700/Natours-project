@@ -1,9 +1,6 @@
 .grid {
-  display: -ms-grid;
   display: grid;
   row-gap: 9.6rem;
-  -webkit-column-gap: 6.4rem;
-  -moz-column-gap: 6.4rem;
   column-gap: 6.4rem;
   @include respond(tab-port) {
     row-gap: 6.4rem;

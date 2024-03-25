@@ -14,8 +14,6 @@
     border-bottom: 3px solid transparent;
     width: 85%;
     display: block;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
 
     @include respond(phone) {
@@ -24,13 +22,11 @@
 
     &:focus {
       outline: none;
-      -webkit-box-shadow: 0 1rem 2rem rgba($color-primary, 0.15);
       box-shadow: 0 1rem 2rem rgba($color-primary, 0.15);
       border-bottom: 3px solid $color-primary;
     }
 
     &:focus:invalid {
-      -webkit-box-shadow: 0 1rem 2rem rgba($color-secondary-dark, 0.15);
       box-shadow: 0 1rem 2rem rgba($color-secondary-dark, 0.15);
       border-bottom: 3px solid $color-secondary-dark;
     }
@@ -46,29 +42,12 @@
     margin-left: 2rem;
     margin-top: 0.7rem;
     display: block;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-
-  &__input:-moz-placeholder-shown + &__lable {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4rem);
-  }
-
-  &__input:-ms-input-placeholder + &__lable {
-    opacity: 0;
-    visibility: hidden;
-    -ms-transform: translateY(-4rem);
-    transform: translateY(-4rem);
   }
 
   &__input:placeholder-shown + &__lable {
     opacity: 0;
     visibility: hidden;
-    -webkit-transform: translateY(-4rem);
-    -ms-transform: translateY(-4rem);
     transform: translateY(-4rem);
   }
 
@@ -113,12 +92,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       opacity: 0;
-      -webkit-transition: opacity 0.3s;
-      -o-transition: opacity 0.3s;
       transition: opacity 0.3s;
     }
   }

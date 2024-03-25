@@ -7,10 +7,7 @@
     ),
     url(../img/hero-small.jpg);
 
-  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5rem),
-    (-o-min-device-pixel-ratio: 2/1) and (min-width: 37.5rem),
-    (min-resolution: 192dpi) and (min-width: 37.5rem),
-    (min-width: 125rem) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5px), (min-width: 125px) {
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-light, 0.6),

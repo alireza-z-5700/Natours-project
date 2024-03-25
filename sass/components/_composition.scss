@@ -3,18 +3,14 @@
 
   &__photo {
     width: 55%;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     border-radius: 2px;
     position: absolute;
     z-index: 10;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
 
     @include respond(tab-port) {
       width: 35%;
-      -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
       box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
     }
 
@@ -43,24 +39,17 @@
       @include respond(tab-port) {
         top: 0;
         left: 30%;
-        -webkit-transform: scale(1.2) translateY(-0.6rem);
-        -ms-transform: scale(1.2) translateY(-0.6rem);
         transform: scale(1.2) translateY(-0.6rem);
       }
     }
 
     &:hover {
-      -webkit-transform: scale(1.05) translateY(-0.5rem);
-      -ms-transform: scale(1.05) translateY(-0.5rem);
       transform: scale(1.05) translateY(-0.5rem);
-      -webkit-box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       z-index: 20;
     }
   }
   &:hover &__photo:not(:hover) {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
     transform: scale(0.95);
   }
 }
