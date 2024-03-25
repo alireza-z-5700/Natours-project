@@ -137,8 +137,8 @@ body {
   letter-spacing: 0.15rem;
   transition: all 0.3s; }
   .heading-secondary:hover {
-    letter-spacing: 0.4rem;
-    transform: scale(1.02);
+    letter-spacing: 0.3rem;
+    transform: scale(1.01);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
   @media (max-width: 56.25em) {
     .heading-secondary {
