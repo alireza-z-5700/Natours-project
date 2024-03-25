@@ -30,6 +30,8 @@
 
   &__list {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1.6rem;
 
@@ -46,7 +48,10 @@
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
       transition: all 0.2s;
+      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       padding: 0.5rem;
     }
@@ -54,7 +59,10 @@
     &:hover,
     &:active {
       color: $color-primary;
+      -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
       box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+      -webkit-transform: rotate(4deg) scale(1.2);
+      -ms-transform: rotate(4deg) scale(1.2);
       transform: rotate(4deg) scale(1.2);
     }
   }

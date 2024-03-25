@@ -6,10 +6,9 @@
   top: 0;
   left: 0;
 
-  background-image: linear-gradient(
-    rgba($color-black, 0.6),
-    rgba($color-black, 0.6)
-  );
+  background-color: rgba($color-black, 0.4);
+
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 
   @include flexcenter;
@@ -33,7 +32,6 @@
     @include respond(big-desktop) {
       width: 75%;
     }
-    // height: 60rem;
 
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
@@ -122,6 +120,8 @@
       font-size: 4rem;
       text-decoration: none;
       display: inline-block;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
       transition: all 0.2s;
       line-height: 1;
     }
@@ -131,13 +131,15 @@
     }
   }
 
-  // open state
+  /* open state */
   &:target {
     opacity: 1;
     visibility: visible;
   }
 
   &:target &__content {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
