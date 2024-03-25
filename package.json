@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b 'last 4 versions' css/style.css -o css/style-prefixed.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.19",
     "concat": "^1.0.3",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^11.0.0"
   }
 }
